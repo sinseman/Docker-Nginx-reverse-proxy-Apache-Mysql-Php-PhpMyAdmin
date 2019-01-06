@@ -21,6 +21,7 @@ Avec cette architecture, je vous propose de mettre en place `Nginx` en serveur p
 * Exécutez la commande suivante : `docker build -t apachemy`.
 * Puis exécutez la commande suivante : `docker-compose up -d`.
 * Faites un `docker ps` et vous constaterez le bon fonctionnement de vos conteneurs.
+* docker exec -it apache-docker bash
 
 ## Configuration
 **:warning: Avant de déclarer un bug, vérifiez que vos ports ne sont pas déjà utilisés par d'autres services**

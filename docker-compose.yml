@@ -46,10 +46,11 @@ services:
             - mysqldb
     mysqldb:
         image: mysql
+        command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
         container_name: ${MYSQL_HOST}
         restart: always
         env_file:
-            - ".env"
+            - "./.env"
         environment:
             - MYSQL_DATABASE=${MYSQL_DATABASE}
             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -59,3 +60,4 @@ services:
             - "8989:3306"
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
+            - "./dumps:/root/dumps"
