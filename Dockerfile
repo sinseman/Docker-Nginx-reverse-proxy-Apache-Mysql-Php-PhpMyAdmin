@@ -3,7 +3,7 @@ MAINTAINER Dan Pupius <dan@pupi.us>
 
 # Install apache, PHP, and supplimentary programs. openssh-server, curl, and lynx-cur are for debugging the container.
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    apache2 zip unzip php7.2 php7.2-mysql php7.2-zip libapache2-mod-php7.2 curl php-mysql php-pdo php-xml php-curl php-gd
+    apache2 zip unzip php7.2 php7.2-mysql php7.2-zip libapache2-mod-php7.2 curl php-mysql php-pdo php-xml php-curl php-gd php-memcache default-jdk git rsync
 
 # Enable apache mods.
 RUN a2enmod php7.2
